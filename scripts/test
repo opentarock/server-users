@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+./scripts/build_base_image.sh
+docker build -t opentarock/server-users-test docker/test
+docker run -v `pwd`:/project opentarock/server-users-test "$@"

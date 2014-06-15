@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+./scripts/build_base_image.sh
+if [ docker/run/requirements.txt -ot requirements.txt ]; then
+    cp requirements.txt docker/run/requirements.txt
+fi
+docker build -t opentarock/server-users-run docker/run
+docker run -v `pwd`:/project opentarock/server-users-run

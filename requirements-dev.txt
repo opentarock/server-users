@@ -1,0 +1,5 @@
+coverage
+pytest
+pytest-quickcheck
+pytest-cov
+pytest-pep8

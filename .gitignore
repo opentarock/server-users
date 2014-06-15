@@ -1,0 +1,8 @@
+.cache
+.coverage
+.ropeproject
+.tox
+*.egg-info
+__pycache__
+htmlcov
+docker/run/requirements.txt

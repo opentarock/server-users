@@ -1,0 +1,6 @@
+SQLAlchemy
+alembic
+pycapnp
+pycrypto
+pyyaml
+-e git://github.com/tonysimpson/nanomsg-python.git#egg=nanomsg
