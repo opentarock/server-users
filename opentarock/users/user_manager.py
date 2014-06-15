@@ -29,8 +29,8 @@ class UserManager:
             self.session.commit()
         except IntegrityError as e:
             self.session.rollback()
-            if (str(e.orig).startswith("UNIQUE")
-               and str(e.orig).endswith("users.email")):
+            if ("unique" in str(e.orig).lower()
+               and "email" in str(e.orig).lower()):
                 raise DuplicateEmailError("E-mail address already used")
             else:
                 raise e
