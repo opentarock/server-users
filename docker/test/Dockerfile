@@ -24,8 +24,6 @@ RUN pip3.3 install cython
 
 RUN pip3 install tox
 
-RUN mkdir /sqlite
-
 WORKDIR /project
 
 CMD ["tox"]

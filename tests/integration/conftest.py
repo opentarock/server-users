@@ -15,7 +15,7 @@ def apply_migrations():
 
 @pytest.fixture(scope='session')
 def engine(request):
-    DB_LOCATION = '/sqlite/users.db'
+    DB_LOCATION = '.sqlite/users.db'
     engine = sqlalchemy.create_engine('sqlite:///' + DB_LOCATION,
                                       connect_args={'isolation_level': None})
     apply_migrations()
